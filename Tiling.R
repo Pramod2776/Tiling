@@ -176,18 +176,18 @@ DO_sort = combined_data %>%
   group_by(value) %>% slice(which.max(RATIO4))
 
 
-46_sort = combined_data %>%
+sort3 = combined_data %>%
   dplyr::select("sgRNA_sequence", "value", "RATIO3) %>%
   group_by(value) %>% slice(which.max(RATIO3))
 
 
 
-21_sort = combined_data %>%
+sort2 = combined_data %>%
   dplyr::select("sgRNA_sequence", "value", "RATIO2") %>%
   group_by(value) %>% slice(which.max(RATIO2))
 
 
-99_sort = combined_data %>%
+sort1 = combined_data %>%
   dplyr::select("sgRNA_sequence", "value", "Ratio1") %>%
   group_by(value) %>% slice(which.max(Ratio1)
 
