@@ -144,15 +144,15 @@ write.csv(plot_data, "plot_data.csv")
 
 library(dplyr)
 
-99_data = plot_data %>% 
+data1 = plot_data %>% 
   rowwise() %>% 
   do(data.frame (Ratio_1= .$Ratio1, value = .$S1.x:.$ E1.x))
 
-21_data = plot_data %>% 
+data1 = plot_data %>% 
   rowwise() %>% 
   do(data.frame (RATIO2 = .$RATIO2, value = .$S1.x:.$ E1.x))
 
-46_data = plot_data %>% 
+data3 = plot_data %>% 
   rowwise() %>% 
   do(data.frame (RATIO3= .$RATIO3 value = .$S1.x:.$ E1.x))
 
@@ -166,7 +166,7 @@ sgRNA_sequence_data = plot_data %>%
   do(data.frame (sgRNA_sequence = .$sgRNA_sequence, value = .$S1.x:.$ E1.x))
 
 
-combined_data = cbind(sgRNA_sequence_data, DO_data, 46_data, 21_data, 99_data)
+combined_data = cbind(sgRNA_sequence_data, DO_data, data3, data2, data1)
 
 write.csv(combined_data, "plot_data_combined.csv")
 
